@@ -1,0 +1,56 @@
+﻿@model LoanApplicationContracts.Loan
+
+@{
+    ViewData["Title"] = "EditLoanApplication";
+}
+
+<h1>EditLoanApplication</h1>
+
+<h4>Loan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditLoanApplication">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">              
+                <input asp-for="LoanId" class="form-control" type ="hidden" />
+            </div>
+            <div class="form-group">
+                <label asp-for="AmountRequested" class="control-label"></label>
+                <input asp-for="AmountRequested" class="form-control" />
+                <span asp-validation-for="AmountRequested" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoOfYearsToPayback" class="control-label"></label>
+                <input asp-for="NoOfYearsToPayback" class="form-control" />
+                <span asp-validation-for="NoOfYearsToPayback" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoOfMonthsToPayback" class="control-label"></label>
+                <input asp-for="NoOfMonthsToPayback" class="form-control" />
+                <span asp-validation-for="NoOfMonthsToPayback" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Apr" class="control-label"></label>
+                <input asp-for="Apr" class="form-control" readonly />
+                @*<span asp-validation-for="Apr" class="text-danger"></span>*@
+            </div>
+
+            <div class="form-group">
+                <label asp-for="NoOfOutstaningDebts" class="control-label"></label>
+                <input asp-for="NoOfOutstaningDebts" class="form-control" />
+                <span asp-validation-for="NoOfOutstaningDebts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="prev" id="prev" value="2" />
+                <input type="submit" value="Previous" asp-controller="Applicants" asp-action="EditBusiness" class="btn btn-secondary" />
+                <input type="submit" value="Submit" class="btn btn-secondary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@*@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@

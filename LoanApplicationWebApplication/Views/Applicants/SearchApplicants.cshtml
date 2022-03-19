@@ -1,0 +1,113 @@
+﻿@model IEnumerable<LoanApplicationContracts.LoanApplicationDetails>
+
+@{
+    ViewData["Title"] = "SearchApplicants";
+}
+
+<h2>Search Applicants </h2>
+<h4>Search Results will show applicants matching ANY of the filter</h4>
+
+
+<form asp-action="SearchApplicants" method="post">
+    <table>
+        <tr>
+            <td>
+                <label class="control-label"> Applicant Name </label>
+            </td>
+            <td>
+                <input type="text" id="ApplicantName" name="ApplicantName" value=""  />
+            </td>
+            <td>
+                <label class="control-label"> Requested Loan Amount</label>
+            </td>
+            <td>
+                <input type="text" id="AmountRequested" name="AmountRequested" value=""  required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="control-label"> Business Title</label>
+            </td>
+            <td>
+                <input type="text" id="BusinessName" name="BusinessName" value="" />
+            </td>
+            <td>
+                <label class="control-label"> Credit Rating</label>
+            </td>
+            <td>
+                <input type="text" id="CreditRating" name="CreditRating" value="" required/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="control-label"> Loan Application Date</label>
+            </td>
+            <td>
+                <input type="text" id="DateApplied" name="DateApplied" value=""/>
+            </td>
+            <td colspan="2">
+                <input type="submit" value="Filter" class="btn btn-secondary" />
+
+            </td>
+
+        </tr>
+    </table>
+</form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.applicant.ApplicantId)
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.applicant.FirstName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.applicant.LastName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.loan.AmountRequested)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.business.Title)
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.AddressId)
+                    </th>*@
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.applicant.ApplicantId)
+                    </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.applicant.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.applicant.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.loan.AmountRequested)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.business.Title)
+                    </td>
+
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.AddressId)
+                        </td>*@
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.applicant.ApplicantId }) |
+                        @Html.ActionLink("Details", "GetApplicantDetails", new { ApplicantId = item.applicant.ApplicantId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.applicant.ApplicantId })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    

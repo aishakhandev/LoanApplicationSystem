@@ -1,0 +1,88 @@
+﻿@model IEnumerable<LoanApplicationContracts.Applicant >
+
+@{
+    ViewData["Title"] = "Loan Applicants";
+}
+
+<h2> Applicants List</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.ApplicantId)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.DateofBirth)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Nationality)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>*@
+            @*<th>
+                @Html.DisplayNameFor(model => model.AddressId)
+            </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ApplicantId)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.MiddleName)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.DateofBirth)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Nationality)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.AddressId)
+            </td>*@
+        <td>
+            @Html.ActionLink("Edit", "EditApplicanttemp", new { id = item.ApplicantId }) |
+            @Html.ActionLink("Details", "GetApplicantDetails", new { ApplicantId = item.ApplicantId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ApplicantId },
+            new { onclick = "return confirm('Are you sure you wish to delete this article?');" }) 
+        </td>
+        </tr>
+}
+    </tbody>
+</table>

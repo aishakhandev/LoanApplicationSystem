@@ -1,0 +1,9 @@
+C:\Users\17327\source\repos\WebApplication1\LoanApplicationContracts\bin\Release\netcoreapp3.1\LoanApplicationContracts.deps.json
+C:\Users\17327\source\repos\WebApplication1\LoanApplicationContracts\bin\Release\netcoreapp3.1\LoanApplicationContracts.dll
+C:\Users\17327\source\repos\WebApplication1\LoanApplicationContracts\bin\Release\netcoreapp3.1\LoanApplicationContracts.pdb
+C:\Users\17327\source\repos\WebApplication1\LoanApplicationContracts\obj\Release\netcoreapp3.1\LoanApplicationContracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\17327\source\repos\WebApplication1\LoanApplicationContracts\obj\Release\netcoreapp3.1\LoanApplicationContracts.AssemblyInfoInputs.cache
+C:\Users\17327\source\repos\WebApplication1\LoanApplicationContracts\obj\Release\netcoreapp3.1\LoanApplicationContracts.AssemblyInfo.cs
+C:\Users\17327\source\repos\WebApplication1\LoanApplicationContracts\obj\Release\netcoreapp3.1\LoanApplicationContracts.csproj.CoreCompileInputs.cache
+C:\Users\17327\source\repos\WebApplication1\LoanApplicationContracts\obj\Release\netcoreapp3.1\LoanApplicationContracts.dll
+C:\Users\17327\source\repos\WebApplication1\LoanApplicationContracts\obj\Release\netcoreapp3.1\LoanApplicationContracts.pdb

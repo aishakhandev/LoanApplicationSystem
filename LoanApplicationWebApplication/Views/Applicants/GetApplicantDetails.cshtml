@@ -1,0 +1,146 @@
+﻿@model LoanApplicationContracts.LoanApplicationDetails
+
+@{
+    ViewData["Title"] = "GetApplicantDetails";
+}
+
+<h2> Applicant Details</h2>
+
+<div>
+  
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            @* @Html.DisplayNameFor(model => model.applicant.ApplicantId)*@
+        </dt>
+        <dd class="col-sm-8">
+            @Html.HiddenFor(model => model.applicant.ApplicantId)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.applicant.FirstName)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.applicant.FirstName)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.applicant.LastName)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.applicant.LastName)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.applicant.MiddleName)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.applicant.MiddleName)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.applicant.Email)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.applicant.Email)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.applicant.Phone)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.applicant.Phone)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.applicant.DateofBirth)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.applicant.DateofBirth)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.applicant.Nationality)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.applicant.Nationality)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.applicant.Gender)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.applicant.Gender)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.business.Title)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.business.Title)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.business.Email)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.business.Email)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.AmountRequested)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.loan.AmountRequested)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.NoOfYearsToPayback)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.loan.NoOfYearsToPayback)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.NoOfMonthsToPayback)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.loan.NoOfMonthsToPayback)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.Apr)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.loan.Apr)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.CreditRating)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.loan.CreditRating)
+        </dd>
+       
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.TotalOutstandingDebt)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.loan.TotalOutstandingDebt)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.RiskRating)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.loan.RiskRating)
+        </dd>
+        @*<dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.ApplicantId)
+        </dt>*@
+
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.DateApplied)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.loan.DateApplied)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.loan.NoOfOutstaningDebts)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.loan.NoOfOutstaningDebts)
+        </dd>
+        @*<dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.AddressId)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.AddressId)
+        </dd>*@
+    </dl>
+</div>
+
